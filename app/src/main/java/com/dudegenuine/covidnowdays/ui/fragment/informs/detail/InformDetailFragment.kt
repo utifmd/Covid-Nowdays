@@ -6,8 +6,6 @@ import androidx.fragment.app.Fragment
 import com.dudegenuine.covidnowdays.R
 import com.dudegenuine.covidnowdays.databinding.FragmentInformDetailBinding
 import com.dudegenuine.covidnowdays.model.remote.News
-import com.dudegenuine.covidnowdays.ui.fragment.informs.InformViewModel
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
 /**
  * Covid Nowdays created by utifmd on 12/06/21.

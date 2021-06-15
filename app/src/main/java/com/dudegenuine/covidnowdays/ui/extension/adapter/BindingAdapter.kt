@@ -28,6 +28,7 @@ import com.dudegenuine.covidnowdays.model.remote.official.CovidItem
 import com.dudegenuine.covidnowdays.model.remote.official.GovCovidData
 import com.dudegenuine.covidnowdays.ui.extension.adapter.ModelAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.snackbar.Snackbar
 
 /**
  * Covid Nowdays created by utifmd on 04/05/21.
@@ -167,6 +168,9 @@ fun setWebView(view: WebView, url: String){
 /*
 * Extension functions
 * */
+fun ViewModel.alert(view: View, message: String){
+    Snackbar.make(view, message, Snackbar.LENGTH_SHORT).show()
+}
 fun ViewModel.navigate(view: View, direction: NavDirections){
     Navigation.findNavController(view).navigate(direction)
 }

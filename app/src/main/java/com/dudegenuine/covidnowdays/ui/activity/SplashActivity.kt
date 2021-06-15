@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
+import com.dudegenuine.covidnowdays.model.remote.Status
 import com.dudegenuine.covidnowdays.ui.fragment.cases.CasesViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -18,11 +19,11 @@ class SplashActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        casesViewModel.officialCovidData.observe(this, {
-            startActivity(
-                Intent(this, MainActivity::class.java)
-            ).apply {
-                finish()
+        casesViewModel.officialCovid.observe(this, {
+            val starting = Intent(this@SplashActivity, MainActivity::class.java)
+            when(it.status){
+                Status.LOADING -> Log.d(TAG, "onCreate: loading..")
+                else -> startActivity( starting ).apply { finish() }
             }
         })
     }

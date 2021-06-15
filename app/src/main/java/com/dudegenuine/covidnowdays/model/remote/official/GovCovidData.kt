@@ -1,7 +1,12 @@
 package com.dudegenuine.covidnowdays.model.remote.official
 
+import com.dudegenuine.covidnowdays.di.utility.IUtility
 import com.google.gson.annotations.SerializedName
+import org.koin.core.KoinComponent
+import org.koin.core.inject
 import java.io.Serializable
+import java.text.DateFormat
+import java.util.*
 
 /**
  * Covid Nowdays created by utifmd on 30/05/21.
@@ -21,7 +26,8 @@ data class GovCovidData(
 
 	@SerializedName("last_date")
 	val lastDate: String? = null
-): Serializable {
+): Serializable, KoinComponent {
+	private val utility: IUtility by inject()
 
 	val previewLastDate: String
 		get() = "Terakhir diupdate pada $lastDate"

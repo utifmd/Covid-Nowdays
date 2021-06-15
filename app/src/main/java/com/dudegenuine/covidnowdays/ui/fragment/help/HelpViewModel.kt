@@ -13,6 +13,7 @@ import com.dudegenuine.covidnowdays.di.utility.IUtility
 import com.dudegenuine.covidnowdays.model.local.Common
 import com.dudegenuine.covidnowdays.model.local.Header
 import com.dudegenuine.covidnowdays.model.remote.Hospital
+import com.dudegenuine.covidnowdays.model.remote.Resource
 import com.dudegenuine.covidnowdays.ui.extension.ModelContract
 import com.dudegenuine.covidnowdays.ui.extension.navigate
 import com.google.android.material.snackbar.Snackbar
@@ -27,7 +28,7 @@ import java.lang.IllegalStateException
 class HelpViewModel(val repository: IRepository): ViewModel(), KoinComponent {
     val TAG: String = javaClass.simpleName
 
-    val utility: IUtility by inject()
+    private val utility: IUtility by inject()
 
     val isLoading = MutableLiveData<Boolean>()
     val isExpand = MutableLiveData<Boolean>()
@@ -40,10 +41,9 @@ class HelpViewModel(val repository: IRepository): ViewModel(), KoinComponent {
     /*
     * Requests
     * */
-    val unofficialHospitals: LiveData<List<Hospital>> = liveData(Dispatchers.IO) {
-        isLoading.postValue(true)
+    val unofficialHospitals: LiveData<Resource<List<Hospital>>> = liveData(Dispatchers.IO) {
+        emit(Resource.loading(null))
         emit(repository.getHospitals())
-        isLoading.postValue(false)
     }
     // val savedProvince: String get() = repository.getSavedProvince()
 

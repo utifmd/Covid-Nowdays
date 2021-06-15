@@ -8,5 +8,5 @@ import org.koin.dsl.module
  * Covid Nowdays created by utifmd on 30/05/21.
  */
 val repositoryModule = module {
-    single<IRepository> { RepositoryImpl(dataSource = get(), prefs = get()) }
+    single<IRepository> { RepositoryImpl(dataSource = get(), prefs = get(), responseHandler = get()) }
 }

@@ -10,7 +10,10 @@ import com.dudegenuine.covidnowdays.databinding.ActivityMainBinding
 
 // TODO: 12/06/21
 /*
-* 3. Warning Build
+* -[x] Handle Internet
+* -[] Handle onBack WebView
+* -[] Handle Share App
+* -[] Warning Build
 * */
 class MainActivity: BaseActivity() {
     val TAG: String = javaClass.name

@@ -5,13 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <import type="com.dudegenuine.covidnowdays.model.remote.Status"/>
+        <import type="android.view.View"/>
         <variable name="informViewModel" type="com.dudegenuine.covidnowdays.ui.fragment.informs.InformViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context="com.dudegenuine.covidnowdays.ui.fragment.informs.InformFragment">
+        android:layout_height="match_parent">
         <include layout="@layout/item_appbar_layout" src="@{@drawable/banner_inform}" isCollapse="false" />
 
         <androidx.core.widget.NestedScrollView
@@ -32,10 +33,15 @@
                 android:paddingTop="@dimen/between_shadow"
                 android:clipToPadding="false"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                bind:newsAdapter="@{informViewModel.news}"
+                bind:newsAdapter="@{informViewModel.news.data}"
                 bind:newsListener="@{informViewModel::onNewsItemSelected}" />
 
         </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:visibility="@{informViewModel.news.status.equals(Status.ERROR) ? View.VISIBLE : View.GONE}"
+            android:text="@{informViewModel.news.message}"
+            style="@style/Alert"/>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

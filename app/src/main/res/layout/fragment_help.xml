@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <import type="com.dudegenuine.covidnowdays.model.remote.Status"/>
         <import type="android.view.View"/>
         <variable
             name="viewModel"
@@ -13,8 +14,7 @@
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context="com.dudegenuine.covidnowdays.ui.fragment.help.HelpFragment">
+        android:layout_height="match_parent">
         <include layout="@layout/item_appbar_layout"
             src="@{@drawable/banner_help}" isCollapse="false"/>
 
@@ -37,7 +37,7 @@
                 android:paddingTop="@dimen/between_shadow"
                 android:clipToPadding="false"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                bind:hospitalAdapter="@{viewModel.unofficialHospitals}"
+                bind:hospitalAdapter="@{viewModel.unofficialHospitals.data}"
                 bind:helpListener="@{viewModel::onHelpItemSelected}"/>
         </androidx.core.widget.NestedScrollView>
 
@@ -52,5 +52,10 @@
             bind:popUpMenu="@{true}"
             bind:popUpListener="@{viewModel.onMenuItemSelected}"/>
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:visibility="@{viewModel.unofficialHospitals.status.equals(Status.ERROR) ? View.VISIBLE : View.GONE}"
+            android:text="@{viewModel.unofficialHospitals.message}"
+            style="@style/Alert"/>
+        
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

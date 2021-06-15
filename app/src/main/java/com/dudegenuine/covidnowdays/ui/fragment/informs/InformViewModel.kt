@@ -9,6 +9,7 @@ import com.dudegenuine.covidnowdays.data.repository.IRepository
 import com.dudegenuine.covidnowdays.model.local.Common
 import com.dudegenuine.covidnowdays.model.local.Header
 import com.dudegenuine.covidnowdays.model.remote.News
+import com.dudegenuine.covidnowdays.model.remote.Resource
 import com.dudegenuine.covidnowdays.ui.extension.ModelContract
 import com.dudegenuine.covidnowdays.ui.extension.navigate
 import com.google.android.material.snackbar.Snackbar
@@ -34,9 +35,8 @@ class InformViewModel(repository: IRepository): ViewModel() {
     * Request
     * */
     val news = liveData(Dispatchers.IO) {
-        isLoading.postValue(true)
+        emit(Resource.loading(null))
         emit(repository.getNews())
-        isLoading.postValue(false)
     }
 
     /*

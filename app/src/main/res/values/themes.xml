@@ -40,6 +40,15 @@
         <item name="android:layout_marginBottom">@dimen/item_large</item>
         <item name="android:background">?android:attr/listDivider</item>
     </style>
+    <style name="Alert">
+        <item name="android:layout_margin">@dimen/item_small</item>
+        <item name="android:padding">@dimen/item_small</item>
+
+        <item name="android:textColor">@color/design_default_color_primary</item>
+        <item name="android:background">@drawable/shape_border</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
     <style name="SplashScreen" parent="Theme.AppCompat.NoActionBar">
         <item name="android:background">@drawable/splash_brand_logo</item>
         <item name="android:fitsSystemWindows">true</item>

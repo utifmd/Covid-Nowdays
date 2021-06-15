@@ -4,6 +4,8 @@ import com.dudegenuine.covidnowdays.BuildConfig
 import com.dudegenuine.covidnowdays.data.api.ICoronaService
 import com.dudegenuine.covidnowdays.di.network.BaseNetworksImpl
 import com.dudegenuine.covidnowdays.di.network.IBaseNetwork
+import com.dudegenuine.covidnowdays.di.network.IResponseHandler
+import com.dudegenuine.covidnowdays.di.network.ResponseHandlerImpl
 import org.koin.dsl.module
 
 /**
@@ -19,6 +21,8 @@ val networkModule = module {
     single{
         get<IBaseNetwork>().builder().build().create(ICoronaService::class.java)
     }
+
+    single<IResponseHandler> { ResponseHandlerImpl() }
 
     /*single<INetworks.IThirdPartyNetwork> {
         ThirdPartyNetworkImpl(get(), BuildConfig.BASE_URL_UNOFFICIAL_FIRST)
