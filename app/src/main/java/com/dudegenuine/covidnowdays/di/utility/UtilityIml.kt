@@ -7,6 +7,7 @@ import android.text.format.DateUtils
 import androidx.appcompat.app.AppCompatActivity
 import com.dudegenuine.covidnowdays.R
 import com.dudegenuine.covidnowdays.base.BaseApplication
+import java.lang.Exception
 import java.text.DecimalFormat
 import java.text.SimpleDateFormat
 import java.util.*
@@ -54,13 +55,18 @@ class UtilityIml(androidContext: Context): IUtility{
     }
 
     override fun getWidgetShareText(context: Context, title: String, text: String) {
-        context.startActivity(
-            Intent.createChooser(Intent().apply {
-                action = Intent.ACTION_SEND
-                putExtra(Intent.EXTRA_TITLE, title)
-                putExtra(Intent.EXTRA_TEXT, text) // data = contentUri
-                flags = Intent.FLAG_GRANT_READ_URI_PERMISSION
-            }, null)
-        )
+        try {
+            context.startActivity(
+                Intent.createChooser(Intent().apply {
+                    action = Intent.ACTION_SEND
+                    type = "text/plain"
+                    putExtra(Intent.EXTRA_TITLE, title)
+                    putExtra(Intent.EXTRA_TEXT, text) // data = contentUri
+                    flags = Intent.FLAG_GRANT_READ_URI_PERMISSION
+                }, "Choose One")
+            )
+        }catch (e: Exception){
+            getWidgetAlertMessage(context, "Invalid", "${e.message}")
+        }
     }
 }

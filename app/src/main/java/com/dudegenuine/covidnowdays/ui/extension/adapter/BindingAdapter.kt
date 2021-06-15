@@ -1,19 +1,15 @@
 package com.dudegenuine.covidnowdays.ui.extension
 
-import android.annotation.SuppressLint
 import android.graphics.Bitmap
-import android.view.Gravity
 import android.view.MenuItem
 import android.view.View
-import android.view.ViewGroup
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.*
 import androidx.annotation.DrawableRes
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.view.menu.MenuBuilder
-import androidx.appcompat.view.menu.MenuPopupHelper
 import androidx.appcompat.widget.Toolbar
+import androidx.core.widget.NestedScrollView
 import androidx.databinding.BindingAdapter
 import androidx.lifecycle.ViewModel
 import androidx.navigation.NavDirections
@@ -139,9 +135,7 @@ fun setImageViewResource(view: TextView, value: Boolean) {
 @BindingAdapter("bind:webView")
 fun setWebView(view: WebView, url: String){
     view.apply {
-        val progress = ProgressBar(view.context).apply {
-            setPadding(6, 6, 6, 6)
-        }
+        val progress = ProgressBar(view.context).apply { setPadding(6, 6, 6, 6) }
 
         val client = object : WebViewClient() {
             override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
@@ -162,6 +156,7 @@ fun setWebView(view: WebView, url: String){
         }
 
         loadUrl(url)
+
     }
 }
 

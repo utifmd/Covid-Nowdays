@@ -22,13 +22,15 @@
         <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1875" />
         <entry key="app/src/main/res/drawable/invest.xml" value="0.5" />
         <entry key="app/src/main/res/drawable/shape_border.xml" value="0.1875" />
-        <entry key="app/src/main/res/drawable/shape_clip.xml" value="0.2037037037037037" />
+        <entry key="app/src/main/res/drawable/shape_clip.xml" value="0.5" />
+        <entry key="app/src/main/res/drawable/shape_cover.xml" value="0.18645833333333334" />
+        <entry key="app/src/main/res/drawable/shape_home.xml" value="0.33" />
         <entry key="app/src/main/res/drawable/splash_brand_logo.xml" value="0.25333333333333335" />
         <entry key="app/src/main/res/drawable/user_research.xml" value="0.5" />
         <entry key="app/src/main/res/drawable/wash_your_hands.xml" value="0.19907407407407407" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22708333333333333" />
         <entry key="app/src/main/res/layout/card_case.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_case.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_case.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_case_detail.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_help.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_help_detail.xml" value="0.24114583333333334" />

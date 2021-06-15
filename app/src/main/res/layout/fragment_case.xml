@@ -14,41 +14,44 @@
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <include layout="@layout/item_appbar_layout"
-            src="@{@drawable/banner_case}" isCollapse="@{caseViewModel.isCollapse()}"/>
+        <include
+            isCollapse="@{caseViewModel.isCollapse()}"
+            layout="@layout/item_appbar_layout"
+            src="@{@drawable/banner_case}" />
 
         <androidx.core.widget.NestedScrollView
             android:id="@+id/case_options"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/between_shadow_min"
+            android:layout_height="match_parent"
             android:background="@drawable/shape_clip"
+            android:layout_marginTop="@dimen/between_shadow_min"
             android:fillViewport="true"
-            android:elevation="@dimen/item_tiny"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/shape_clip"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
+                android:clipToPadding="false"
                 android:paddingStart="@dimen/between_shadow"
                 android:paddingTop="@dimen/between_shadow">
 
-                <include layout="@layout/item_case_header"
-                    caseViewModel="@{caseViewModel}"/>
-                <include layout="@layout/item_case_card"
-                    caseViewModel="@{caseViewModel}"/>
+                <include
+                    caseViewModel="@{caseViewModel}"
+                    layout="@layout/item_case_header" />
+                <include
+                    caseViewModel="@{caseViewModel}"
+                    layout="@layout/item_case_card" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.core.widget.NestedScrollView>
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:visibility="@{caseViewModel.officialCovid.status.equals(Status.ERROR) ? View.VISIBLE : View.GONE}"
+            style="@style/Alert"
             android:text="@{caseViewModel.officialCovid.message}"
-            style="@style/Alert"/>
+            android:visibility="@{caseViewModel.officialCovid.status.equals(Status.ERROR) ? View.VISIBLE : View.GONE}" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

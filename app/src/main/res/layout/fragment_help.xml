@@ -22,20 +22,18 @@
             android:id="@+id/scrollView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/between_shadow_min"
             android:background="@drawable/shape_clip"
+            android:layout_marginTop="@dimen/between_shadow_min"
             android:fillViewport="true"
-            android:elevation="@dimen/item_tiny"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@drawable/shape_clip"
+                android:clipToPadding="false"
                 android:paddingStart="@dimen/between_shadow"
                 android:paddingTop="@dimen/between_shadow"
-                android:clipToPadding="false"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 bind:hospitalAdapter="@{viewModel.unofficialHospitals.data}"
                 bind:helpListener="@{viewModel::onHelpItemSelected}"/>

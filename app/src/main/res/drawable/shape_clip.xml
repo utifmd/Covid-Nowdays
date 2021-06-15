@@ -51,8 +51,6 @@
     </item>
 
     <item
-        android:width="1000dp"
-        android:height="1000dp"
         android:left="29.5dp"
         android:top="3.5dp">
         <shape>
@@ -61,8 +59,6 @@
     </item>
 
     <item
-        android:width="1000dp"
-        android:height="1000dp"
         android:top="33dp">
         <shape>
             <solid android:color="@color/cardview_light_background" />

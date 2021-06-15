@@ -50,10 +50,9 @@ class CasesViewModel(val repository: IRepository): ViewModel(), KoinComponent {
     * Listeners
     * */
     val onProvinceSelected : (CovidItem) -> Unit = {
-        stateCovidItem.postValue(it)
-        // isCollapse.postValue(true)
-        prefs.editor().putString(IPreferences.PREFS_PROVINCE_NAME, it.key).apply()
         Log.d(TAG, "onProvinceClicked: ${it.key}")
+        prefs.editor().putString(IPreferences.PREFS_PROVINCE_NAME, it.key).apply()
+        stateCovidItem.postValue(it)
     }
 
     fun onCardToDetail(view: View) = navigate(view,

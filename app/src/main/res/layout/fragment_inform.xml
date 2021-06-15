@@ -19,9 +19,9 @@
             android:id="@+id/inform_options"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/between_shadow_min"
             android:fillViewport="true"
             android:background="@drawable/shape_clip"
+            android:layout_marginTop="@dimen/between_shadow_min"
             android:elevation="@dimen/item_tiny"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 

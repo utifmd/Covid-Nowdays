@@ -3,6 +3,9 @@
     xmlns:bind="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
+            name="activity"
+            type="androidx.fragment.app.FragmentActivity" />
+        <variable
             name="news"
             type="com.dudegenuine.covidnowdays.model.remote.News" />
     </data>
@@ -21,7 +24,7 @@
             android:layout_height="match_parent"
             android:layout_margin="@dimen/item_medium">
 
-            <WebView
+            <WebView android:id="@+id/webView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 bind:webView="@{news.url}"/>

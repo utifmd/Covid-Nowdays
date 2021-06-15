@@ -2,7 +2,10 @@ package com.dudegenuine.covidnowdays.ui.fragment.informs.detail
 
 import android.os.Bundle
 import android.view.View
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.navigation.Navigation
 import com.dudegenuine.covidnowdays.R
 import com.dudegenuine.covidnowdays.databinding.FragmentInformDetailBinding
 import com.dudegenuine.covidnowdays.model.remote.News
@@ -23,6 +26,15 @@ class InformDetailFragment: Fragment(R.layout.fragment_inform_detail) {
         binding.apply {
             lifecycleOwner = this@InformDetailFragment
             news = this@InformDetailFragment.news
+
+            requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner,
+                object: OnBackPressedCallback(true){
+                    override fun handleOnBackPressed() {
+                        if (webView.canGoBack()) webView.goBack()
+                        else Navigation.findNavController(view).navigateUp()
+                    }
+                }
+            )
         }
     }
 
