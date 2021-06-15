@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="news" type="com.dudegenuine.covidnowdays.model.remote.News"/>
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_marginHorizontal="@dimen/item_medium"
+        android:layout_marginVertical="@dimen/item_small"
+        app:cardElevation="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/item_common_raw"
+                drawable="@{@drawable/_10_support}" text="@{news.title}" subText="@{news.viewTime}"/>
+        </FrameLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/caseFragment" android:title="@string/case_cov" android:icon="@drawable/ic_baseline_coronavirus_24" />
+    <item android:id="@+id/informFragment" android:title="@string/inform_cov" android:icon="@drawable/ic_baseline_masks_24"/>
+    <item android:id="@+id/helpFragment" android:title="@string/help_cov" android:icon="@drawable/ic_baseline_airport_shuttle_24"/>
+</menu>

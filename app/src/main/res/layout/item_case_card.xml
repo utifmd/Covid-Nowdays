@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="caseViewModel"
+            type="com.dudegenuine.covidnowdays.ui.fragment.cases.CasesViewModel" />
+        <variable name="icon" type="String" />
+        <variable name="title" type="String" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/item_medium"
+        android:layout_marginVertical="@dimen/item_small">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/item_medium"
+                android:weightSum="9">
+
+                <include key="@{@string/cases}" drawable="@{@drawable/coronavirus}"
+                    title="@{caseViewModel.stateCovidItem.previewTotal}"
+                    layout="@layout/item_case_card_field" />
+
+                <include key="@{@string/recovered}" drawable="@{@drawable/mask}"
+                    title="@{caseViewModel.stateCovidItem.previewRecovered}"
+                    layout="@layout/item_case_card_field" />
+
+                <include key="@{@string/death}" drawable="@{@drawable/_04_ambulance}"
+                    title="@{caseViewModel.stateCovidItem.previewDeath}"
+                    layout="@layout/item_case_card_field" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </com.google.android.material.card.MaterialCardView>
+    </FrameLayout>
+</layout>

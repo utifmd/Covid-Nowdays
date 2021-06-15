@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="between_shadow">26dp</dimen>
+    <dimen name="between_shadow_min">-35dp</dimen>
+    <dimen name="between_medium">16dp</dimen>
+    <dimen name="spacing_large">30dp</dimen>
+    <dimen name="spacing_small">26dp</dimen>
+    <dimen name="item_large">24dp</dimen>
+    <dimen name="item_x_large">34dp</dimen>
+    <dimen name="item_medium">16dp</dimen>
+    <dimen name="item_small">8dp</dimen>
+    <dimen name="item_tiny">4dp</dimen>
+</resources>

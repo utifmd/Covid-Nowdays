@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.dudegenuine.covidnowdays.ui.fragment.help.HelpViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.dudegenuine.covidnowdays.ui.fragment.help.HelpFragment">
+        <include layout="@layout/item_appbar_layout"
+            src="@{@drawable/banner_help}" isCollapse="false"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/between_shadow_min"
+            android:background="@drawable/shape_clip"
+            android:fillViewport="true"
+            android:elevation="@dimen/item_tiny"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/shape_clip"
+                android:paddingStart="@dimen/between_shadow"
+                android:paddingTop="@dimen/between_shadow"
+                android:clipToPadding="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                bind:hospitalAdapter="@{viewModel.unofficialHospitals}"
+                bind:helpListener="@{viewModel::onHelpItemSelected}"/>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/fab_more"
+            android:src="@drawable/ic_baseline_more_vert_24"
+            android:layout_margin="@dimen/item_medium"
+            app:layout_anchor="@id/scrollView"
+            app:layout_anchorGravity="right|top"
+            bind:popUpMenu="@{true}"
+            bind:popUpListener="@{viewModel.onMenuItemSelected}"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

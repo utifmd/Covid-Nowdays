@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <variable name="header" type="com.dudegenuine.covidnowdays.model.local.Header"/>
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/item_tiny"
+                android:paddingHorizontal="@dimen/item_medium"
+                android:textStyle="bold"
+                android:text="@{header.title}"
+                android:visibility="@{header.hideTitle ? View.GONE : View.VISIBLE}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/item_tiny"
+                android:paddingHorizontal="@dimen/item_medium"
+                android:text="@{header.desc}"
+                android:visibility="@{header.hideDesc ? View.GONE : View.VISIBLE}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </FrameLayout>
+</layout>

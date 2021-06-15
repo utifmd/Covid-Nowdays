@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../../../../../../layout/custom_preview.xml" value="0.1" />
+        <entry key="../../../../../../../Library/Android/sdk/platforms/android-30/data/res/layout/simple_expandable_list_item_1.xml" value="0.25" />
+        <entry key="../../../../../../../Library/Android/sdk/platforms/android-30/data/res/layout/simple_list_item_1.xml" value="0.33" />
+        <entry key="../../../../../../../Library/Android/sdk/platforms/android-30/data/res/layout/simple_list_item_2.xml" value="0.15052083333333333" />
+        <entry key="../../../../../../../Library/Android/sdk/platforms/android-30/data/res/layout/simple_list_item_activated_1.xml" value="0.25" />
+        <entry key="../../../../../../../Library/Android/sdk/platforms/android-30/data/res/layout/simple_spinner_item.xml" value="0.196875" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19907407407407407" />
+        <entry key="app/src/main/res/drawable/coronavirus.xml" value="0.19907407407407407" />
+        <entry key="app/src/main/res/drawable/health_insurance.xml" value="0.20277777777777778" />
+        <entry key="app/src/main/res/drawable/ic_banner_case_foreground.xml" value="0.19907407407407407" />
+        <entry key="app/src/main/res/drawable/ic_banner_help_foreground.xml" value="0.19907407407407407" />
+        <entry key="app/src/main/res/drawable/ic_banner_inform_foreground.xml" value="0.21302083333333333" />
+        <entry key="app/src/main/res/drawable/ic_banner_splash_foreground.xml" value="0.1875" />
+        <entry key="app/src/main/res/drawable/ic_baseline_airport_shuttle_24.xml" value="0.19907407407407407" />
+        <entry key="app/src/main/res/drawable/ic_baseline_coronavirus_24.xml" value="0.19907407407407407" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.19907407407407407" />
+        <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1875" />
+        <entry key="app/src/main/res/drawable/invest.xml" value="0.5" />
+        <entry key="app/src/main/res/drawable/shape_clip.xml" value="0.2037037037037037" />
+        <entry key="app/src/main/res/drawable/splash_brand_logo.xml" value="0.25333333333333335" />
+        <entry key="app/src/main/res/drawable/user_research.xml" value="0.5" />
+        <entry key="app/src/main/res/drawable/wash_your_hands.xml" value="0.19907407407407407" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22708333333333333" />
+        <entry key="app/src/main/res/layout/card_case.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_case.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_case_detail.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_help.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_help_detail.xml" value="0.24114583333333334" />
+        <entry key="app/src/main/res/layout/fragment_inform.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/fragment_inform_detail.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/header_app_layout.xml" value="0.24114583333333334" />
+        <entry key="app/src/main/res/layout/item_Inform.xml" value="0.24114583333333334" />
+        <entry key="app/src/main/res/layout/item_appbar_layout.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_case.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_case_card.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_case_card_detail.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/item_case_card_field.xml" value="0.18333333333333332" />
+        <entry key="app/src/main/res/layout/item_case_header.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_case_map.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_case_title.xml" value="0.24114583333333334" />
+        <entry key="app/src/main/res/layout/item_common.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_common_raw.xml" value="0.17135416666666667" />
+        <entry key="app/src/main/res/layout/item_help.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/item_help_detail.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_hospital.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/item_inform.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/item_news.xml" value="0.24114583333333334" />
+        <entry key="app/src/main/res/layout/item_title.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/base_menu.xml" value="0.2361111111111111" />
+        <entry key="app/src/main/res/menu/more_menu.xml" value="0.33" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_banner_case.xml" value="0.10740740740740741" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_banner_help.xml" value="0.10740740740740741" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_banner_inform.xml" value="0.10740740740740741" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

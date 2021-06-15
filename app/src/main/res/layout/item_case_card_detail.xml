@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="covidItem"
+            type="com.dudegenuine.covidnowdays.model.remote.official.CovidItem" />
+        <variable
+            name="headerUpdate"
+            type="com.dudegenuine.covidnowdays.model.local.Header"/>
+        <variable
+            name="headerGender"
+            type="com.dudegenuine.covidnowdays.model.local.Header"/>
+        <variable
+            name="headerAgeScope"
+            type="com.dudegenuine.covidnowdays.model.local.Header"/>
+    </data>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/item_medium"
+        android:orientation="vertical">
+
+        <!--jenis_kelamin-->
+        <include layout="@layout/item_title" header="@{headerGender}" />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/item_small"
+            android:orientation="horizontal"
+            android:weightSum="6">
+            <include key="@{@string/male}" drawable="@{@drawable/man}"
+                title="@{covidItem.viewMale}"
+                layout="@layout/item_case_card_field" />
+            <include key="@{@string/female}" drawable="@{@drawable/woman_1}"
+                title="@{covidItem.viewFemale}"
+                layout="@layout/item_case_card_field" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View style="@style/Divider"/>
+
+        <!--kelompok_umur-->
+        <include layout="@layout/item_title" header="@{headerAgeScope}" />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/item_small"
+            android:orientation="horizontal"
+            android:weightSum="9">
+            <include key="@{@string/_0_5}" drawable="@{@drawable/baby_boy}"
+                title="@{covidItem.viewBaby}"
+                layout="@layout/item_case_card_field" />
+            <include key="@{@string/_6_18}" drawable="@{@drawable/girl_1}"
+                title="@{covidItem.viewChild}"
+                layout="@layout/item_case_card_field" />
+            <include key="@{@string/_19_30}" drawable="@{@drawable/girl}"
+                title="@{covidItem.viewTeen}"
+                layout="@layout/item_case_card_field" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/item_small"
+            android:orientation="horizontal"
+            android:weightSum="9">
+            <include key="@{@string/_31_45}" drawable="@{@drawable/grandmother_1}"
+                title="@{covidItem.viewAdult}"
+                layout="@layout/item_case_card_field" />
+            <include key="@{@string/_46_59}" drawable="@{@drawable/grandmother}"
+                title="@{covidItem.viewElderly}"
+                layout="@layout/item_case_card_field" />
+            <include key="@{@string/_60}" drawable="@{@drawable/grandparents}"
+                title="@{covidItem.viewOlderly}"
+                layout="@layout/item_case_card_field" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View style="@style/Divider"/>
+
+        <!--Covid Update-->
+        <include layout="@layout/item_title" header="@{headerUpdate}" />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/item_small"
+            android:orientation="horizontal"
+            android:weightSum="6">
+            <include key="@{@string/cases}" drawable="@{@drawable/coronavirus}"
+                title="@{covidItem.viewTotal}"
+                layout="@layout/item_case_card_field" />
+            <include key="@{@string/recovered}" drawable="@{@drawable/mask}"
+                title="@{covidItem.viewRecovered}"
+                layout="@layout/item_case_card_field" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/item_small"
+            android:orientation="horizontal"
+            android:weightSum="6">
+            <include key="@{@string/treated}" drawable="@{@drawable/fever}"
+                title="@{covidItem.viewTreated}"
+                layout="@layout/item_case_card_field" />
+            <include key="@{@string/death}" drawable="@{@drawable/_04_ambulance}"
+                title="@{covidItem.viewDeath}"
+                layout="@layout/item_case_card_field" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

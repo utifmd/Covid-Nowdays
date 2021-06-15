@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+    <data>
+        <variable name="common" type="com.dudegenuine.covidnowdays.model.local.Common"/>
+    </data>
+
+    <FrameLayout
+        android:layout_marginHorizontal="@dimen/item_medium"
+        android:layout_marginVertical="@dimen/item_small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView_item_help_logo"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:padding="8dp"
+                android:contentDescription="@string/help_cov"
+                android:scaleType="fitCenter"
+                bind:src="@{common.icon}" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:lines="1"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:text="@{common.label}"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </FrameLayout>
+</layout>

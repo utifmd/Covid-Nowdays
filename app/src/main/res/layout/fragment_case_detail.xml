@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="covidItem"
+            type="com.dudegenuine.covidnowdays.model.remote.official.CovidItem" />
+        <variable
+            name="headerUpdate"
+            type="com.dudegenuine.covidnowdays.model.local.Header"/>
+        <variable
+            name="headerGender"
+            type="com.dudegenuine.covidnowdays.model.local.Header"/>
+        <variable
+            name="headerAgeScope"
+            type="com.dudegenuine.covidnowdays.model.local.Header"/>
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                bind:detailToolbar="@{covidItem.key}" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/item_medium">
+
+                <include
+                    covidItem="@{covidItem}"
+                    headerGender="@{headerGender}"
+                    headerAgeScope="@{headerAgeScope}"
+                    headerUpdate="@{headerUpdate}"
+                    layout="@layout/item_case_card_detail"/>
+
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+</layout>

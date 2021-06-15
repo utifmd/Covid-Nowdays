@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_navigation"
+    app:startDestination="@id/caseFragment">
+
+    <fragment
+        android:id="@+id/caseFragment"
+        android:name="com.dudegenuine.covidnowdays.ui.fragment.cases.CaseFragment"
+        android:label="@string/case_cov"
+        tools:layout="@layout/fragment_case" >
+        <action
+            android:id="@+id/action_caseFragment_to_caseDetailFragment"
+            app:destination="@id/caseDetailFragment">
+            <argument
+                android:name="key_covid_model"
+                app:argType="com.dudegenuine.covidnowdays.model.remote.official.CovidItem"
+                android:defaultValue="@null"
+                app:nullable="true"/>
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/informFragment"
+        android:name="com.dudegenuine.covidnowdays.ui.fragment.informs.InformFragment"
+        android:label="@string/inform_cov"
+        tools:layout="@layout/fragment_inform">
+        <action
+            android:id="@+id/action_informFragment_to_informDetailFragment"
+            app:destination="@id/informDetailFragment">
+            <argument
+                android:name="key_news_model"
+                app:argType="com.dudegenuine.covidnowdays.model.remote.News"
+                android:defaultValue="@null"
+                app:nullable="true"/>
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.dudegenuine.covidnowdays.ui.fragment.help.HelpFragment"
+        android:label="@string/help_cov"
+        tools:layout="@layout/fragment_help" >
+        <action
+            android:id="@+id/action_helpFragment_to_helpDetailFragment"
+            app:destination="@id/helpDetailFragment">
+            <argument
+                android:name="key_hospital_model"
+                app:argType="com.dudegenuine.covidnowdays.model.remote.Hospital"
+                android:defaultValue="@null"
+                app:nullable="true"/>
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/caseDetailFragment"
+        android:name="com.dudegenuine.covidnowdays.ui.fragment.cases.detail.CaseDetailFragment"
+        android:label="fragment_case_detail"
+        tools:layout="@layout/fragment_case_detail" />
+    <fragment
+        android:id="@+id/helpDetailFragment"
+        android:name="com.dudegenuine.covidnowdays.ui.fragment.help.detail.HelpDetailFragment"
+        android:label="fragment_help_detail"
+        tools:layout="@layout/fragment_help_detail" />
+    <fragment
+        android:id="@+id/informDetailFragment"
+        android:name="com.dudegenuine.covidnowdays.ui.fragment.informs.detail.InformDetailFragment"
+        android:label="fragment_help_detail"
+        tools:layout="@layout/fragment_inform_detail" />
+</navigation>
