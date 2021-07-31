@@ -4,10 +4,8 @@ import android.util.Log
 import android.view.View
 import androidx.lifecycle.*
 import com.dudegenuine.covidnowdays.data.repository.IRepository
-import com.dudegenuine.covidnowdays.di.network.IResponseHandler
 import com.dudegenuine.covidnowdays.di.preference.IPreferences
 import com.dudegenuine.covidnowdays.model.remote.Resource
-import com.dudegenuine.covidnowdays.model.remote.Status
 import com.dudegenuine.covidnowdays.model.remote.official.CovidItem
 import com.dudegenuine.covidnowdays.model.remote.official.GovCovidData
 import com.dudegenuine.covidnowdays.ui.extension.navigate

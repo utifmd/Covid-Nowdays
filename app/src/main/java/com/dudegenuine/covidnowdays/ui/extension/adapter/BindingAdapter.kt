@@ -140,6 +140,7 @@ fun setWebView(view: WebView, url: String){
         val client = object : WebViewClient() {
             override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
                 super.onPageStarted(view, url, favicon)
+                removeView(progress)
                 addView(progress)
             }
 

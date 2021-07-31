@@ -9,6 +9,7 @@
     <color name="danger">#F44336</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="bg_brand">#3700B3</color>
     <color name="trans">#80000000</color>
     <color name="transparent">@android:color/transparent</color>
 </resources>

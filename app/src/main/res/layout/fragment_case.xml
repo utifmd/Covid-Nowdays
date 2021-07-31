@@ -16,8 +16,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!--isCollapse="@{caseViewModel.isCollapse()}"-->
         <include
-            isCollapse="@{caseViewModel.isCollapse()}"
             layout="@layout/item_appbar_layout"
             src="@{@drawable/banner_case}" />
 

@@ -16,6 +16,7 @@
         <entry key="app/src/main/res/drawable/ic_banner_help_foreground.xml" value="0.19907407407407407" />
         <entry key="app/src/main/res/drawable/ic_banner_inform_foreground.xml" value="0.21302083333333333" />
         <entry key="app/src/main/res/drawable/ic_banner_splash_foreground.xml" value="0.1875" />
+        <entry key="app/src/main/res/drawable/ic_banner_splash_item_foreground.xml" value="0.18489583333333334" />
         <entry key="app/src/main/res/drawable/ic_baseline_airport_shuttle_24.xml" value="0.19907407407407407" />
         <entry key="app/src/main/res/drawable/ic_baseline_coronavirus_24.xml" value="0.19907407407407407" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.19907407407407407" />
@@ -59,6 +60,7 @@
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_banner_case.xml" value="0.10740740740740741" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_banner_help.xml" value="0.10740740740740741" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_banner_inform.xml" value="0.10740740740740741" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.18645833333333334" />
       </map>
     </option>
   </component>
